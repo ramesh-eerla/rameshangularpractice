@@ -1,0 +1,9 @@
+label {
+display: block;
+position: relative;
+padding-left: 60px; 
+};
+label > span  {
+position:absolute;
+left:0;
+}

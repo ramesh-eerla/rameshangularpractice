@@ -1,0 +1,29 @@
+<p>
+  {{heroname}} works!<br />
+  {{hero.id}} : <strong>{{hero.name | uppercase}}</strong><br />
+  <label> name :
+<input type='text' [(ngModel)]='twowarvalu' placeholder="name"/><br />
+  
+</label>
+<label [innerText]='twowarvalu'></label>
+</p>
+<h2>My Heros list</h2>
+
+
+<div style="width: 100%; display: table;">
+  <div style="display: table-row">
+      <div style="width: 600px; display: table-cell;" >
+        <ul class="heros" >
+          <li *ngFor="let hero of heros" [class.selected]="hero=== selectedhero" (click)="onselect(hero)">
+           <span class="badge"> {{hero.id}} </span>{{hero.name | uppercase}}
+          </li>
+        </ul>
+         </div>
+      <div style="display: table-cell;" > 
+        <app-herodetails [hero]="selectedhero"></app-herodetails>
+         </div>
+  </div>
+</div>
+
+
+
