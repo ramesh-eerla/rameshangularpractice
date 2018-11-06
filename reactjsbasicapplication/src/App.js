@@ -11,7 +11,7 @@ class App extends Component {
 name: 'No codename',
 Version: 	'1.0',
 releasedate: 'September 23, 2008',
-APIlevel:'1'
+APIlevel:'11'
         },
         {
 
@@ -39,7 +39,7 @@ APIlevel:'1'
           APIlevel:'5-7'
                   },
          {
-          
+
                     name: 'Froyo',
                     Version: 	'2.2 - 2.2.3',
                     releasedate: 'May 20, 2010',
@@ -65,7 +65,7 @@ APIlevel:'1'
                     APIlevel:'14 – 15'
                             },
                             {
-                    
+
                               name: 'Jelly Bean',
                               Version: 	'4.1 – 4.3.1',
                               releasedate: 'July 9, 2012',
@@ -89,13 +89,13 @@ APIlevel:'1'
                               releasedate: 'October 5, 2015',
                               APIlevel:'23'
                                       },
-                                                              		
-                                     		
-                                     	
-                                     		
-                                      		
+
+
+
+
+
                                       {
-                              
+
                                         name: 'Nougat',
                                         Version: 	'7.0 – 7.1.2',
                                         releasedate: 'August 22, 2016',
@@ -113,11 +113,11 @@ APIlevel:'1'
                                        releasedate: 'August 6, 2018',
                                        APIlevel: '28'
                                       }
-          
-                                      
-                                      		
-                                      
-        
+
+
+
+
+
       ]
     };
 
