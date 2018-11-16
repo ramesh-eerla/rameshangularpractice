@@ -12,8 +12,8 @@ import {MessageService} from '../message.service';
 export class HerosComponent implements OnInit {
 
   heroname = 'Ramesh';
-  twowarvalu = 'enter input value';
-  heros: Hero[];
+  twowarvalu: String = 'enter name';
+  heroes: Hero[] = [];
   hero: Hero = {
       id: 1,
       name: 'Android',
@@ -27,10 +27,10 @@ this.messageserice.add(this.selectedhero.name + '   ' + this.selectedhero.id);
   constructor(private heroservice: HeroService, public messageserice: MessageService) { }
 
   getHeros(): void {
-     this.heroservice.getHeros().subscribe(heros => this.heros = heros);
-  }
+      this.heroservice.getHeros().subscribe(heroes => { this.heroes = heroes['categories'] ; console.log(this.heroes); });
+    }
   ngOnInit() {
     this.getHeros();
-      }
+     }
 
 }
