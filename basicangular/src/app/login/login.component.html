@@ -1,0 +1,40 @@
+<div class="login_page" bg_image="">
+  <div class="form-group">
+      <label><span>UserName :</span></label> 
+  <input type="text" class="form-control" id="username" (input)="loadUsername($event)"/>
+
+    <label>Password :</label>
+  <input type="password" class="form-control" id="password" (input)="loadPassword($event)"/>
+</div>
+
+  <button type="button" class="btn btn-primary" id="loginbtn" (click)="onClick()" >Login</button>
+ <div fxFlex="value%" fxFlexAlign="end">
+  
+
+  <ng-container *ngIf="disply; else elseblock">
+  
+<label >Username : <span>{{Username}}</span></label><br/>
+<label >Password : <span>{{Password}}</span></label><br/>
+</ng-container>
+<ng-template #elseblock>
+  
+</ng-template>
+</div>
+
+<div class="row">
+<ul class="col-md-12">
+  <li *ngFor="let category of categoies"> 
+<label class="col-md-6">
+{{category.categories.id}}
+</label>
+<label class="col-md-6">
+  {{category.categories.name}}
+</label>
+
+  </li>
+</ul>
+
+</div>
+    
+  
+  </div>
