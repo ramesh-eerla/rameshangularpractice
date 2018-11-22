@@ -1,9 +1,16 @@
 label {
 display: block;
 position: relative;
-padding-left: 60px; 
+padding-left: 20px; 
 };
 label > span  {
 position:absolute;
 left:0;
+}
+#heroinput {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #eee;
+    box-shadow: 1px 2px 2px 2px #0fc
 }

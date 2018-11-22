@@ -3,8 +3,9 @@ import {Observable, of } from 'rxjs';
 import {catchError, map , tap} from 'rxjs/operators';
 import { Hero } from './hero';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
 import {MessageService} from './message.service';
+import { Heros } from './mockheros';
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'user-key': '7a085af4d14c3226e6dd9079a38a3767' })
 };
@@ -26,11 +27,12 @@ private log (message: String) {
   this.messageservice.add('message ${message}');
 }
 
-getHeros(): Observable<any> {
+getHeros(): Observable<Hero[]> {
   this.messageservice.add('Heroserice : Data feteched');
-    return this.httpclient.get(this.fectchurl, { headers: httpOptions.headers }).
+    return of(Heros);
+    /**this.httpclient.get(this.fectchurl, { headers: httpOptions.headers }).
    pipe(tap(_ => this.log('fetched heroes')),
-  catchError(this.handleError('getHeroes', [])));
+  catchError(this.handleError('getHeroes', []))); */
 }
 
 private handleError<T> (operation = 'operation', result?: T) {
