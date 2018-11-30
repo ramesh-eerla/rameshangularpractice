@@ -3,12 +3,20 @@ import '../stylesheets/versionitem.css';
 
 class Versions extends Component {
   render() {
-    
+
     return (
         <div className="Versions">
-      <li >
+      <table className="table table-bordered" id='tdata'>
+        <thead>
+      <tr>
+        <td>
+          <div >
        {this.props.version.name}-{this.props.version.Version}-{this.props.version.releasedate}-{this.props.version.APIlevel}
-      </li>
+</div>
+       </td>
+</tr>
+</thead>
+      </table>
       </div>
     );
   }
